@@ -1,0 +1,3 @@
+protocol bgp tobee from dnpeers {
+  neighbor 172.23.67.1 as 4242420022;
+};
