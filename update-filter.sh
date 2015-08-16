@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+cd "$DIR/registry"
+
+git fetch origin master
+git reset --hard origin/master
+
+ruby utils/bgp-filter.rb --format bird < data/filter.txt > /etc/bird/filter4.conf.new
+mv /etc/bird/filter4.conf.new /etc/bird/filter4.conf
+
+ruby utils/bgp-filter.rb --format bird < data/filter6.txt > /etc/bird/filter6.conf.new
+mv /etc/bird/filter6.conf.new /etc/bird/filter6.conf
+
+birdc reload all
+birdc6 reload all
