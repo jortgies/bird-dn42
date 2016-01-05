@@ -31,7 +31,7 @@ def latency_class(latency)
   when 7.3..20
     3
   else
-    Math.log(latency)
+    Math.log(latency).round
   end
 end
 
@@ -50,7 +50,7 @@ def speed_class(speed)
   when 1000..9999
     25
   else
-    20 + Math.log10((speed.to_f) * 100).to_i
+    20 + Math.log10((speed.to_f) * 100).round
   end
 end
 
