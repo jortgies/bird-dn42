@@ -1,6 +1,9 @@
 ## Example bird configuration for dn42
 
-This is the setup I use on my both dn42 routers.
+* This is the setup I use on my both dn42 routers.
+* It is designed to be reused on multiple hosts.
+* optimize routes by using bgp community values
+* contains example for ibgp/ospf
 
 ## Install
 
