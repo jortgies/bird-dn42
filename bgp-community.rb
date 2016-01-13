@@ -7,10 +7,16 @@
 # - other bgp daemons, contribution are welcome
 
 require 'open3'
+require 'optparse'
 
-def ping(host)
+def ping(host, ipv6)
   print "Try to ping #{host}... (timeout 10s)"
-  out, status = Open3.capture2e("ping", "-W10", "-c5", host)
+  ping = if host =~ /:/ || ipv6
+           "ping6"
+         else
+           "ping"
+         end
+  out, status = Open3.capture2e(ping, "-W10", "-c5", host)
   print "\r"
   if status != 0
     abort "ping failed with: #{status}\n#{out}"
@@ -70,15 +76,27 @@ def crypto_class(crypto)
 end
 
 def main(args)
+
+  banner = "USAGE: #{$0} host mbit_speed unencrypted|unsafe|encrypted|pfs"
+  options = {}
+  OptionParser.new do |opts|
+    opts.banner = banner
+
+    opts.on("-6", "--ipv6", "Assume ipv6 for ping") do |v|
+      options[:ipv6] = true
+    end
+  end.parse!
+
   if args.size < 3
-    puts "USAGE: #{$0} host mbit_speed unencrypted|unsafe|encrypted|pfs"
+    $stderr.puts(banner)
     exit(1)
   end
+
   host, mbit_speed, crypto_type = args
 
   speed_value   = speed_class(mbit_speed)
   crypto_value  = crypto_class(crypto_type)
-  latency = ping(host)
+  latency = ping(host, options[:ipv6])
   latency_value = latency_class(latency)
   date = Time.now.strftime("%Y-%m-%d")
 
