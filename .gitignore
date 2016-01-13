@@ -1,1 +1,5 @@
 ospf-password.conf
+local4.conf
+local6.conf
+peers4
+peers6
