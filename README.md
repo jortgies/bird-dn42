@@ -7,11 +7,12 @@
 
 ## Install
 
+On archlinux bird expect the configuration
+at /etc/bird.conf and /etc/bird6.conf.
+This is NOT the case on debian!
+
 ```
 $ git clone https://github.com/Mic92/ffhl-bird6.git /etc/bird
-# on archlinux bird expect the configuration 
-# at /etc/bird.conf and /etc/bird6.conf
-# this is NOT the case on debian
 $ ln -s /etc/bird/bird.conf /etc/bird.conf
 $ ln -s /etc/bird/bird6.conf /etc/bird6.conf
 $ export HOST=yourhostname
