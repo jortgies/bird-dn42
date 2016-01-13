@@ -12,5 +12,5 @@ mv /etc/bird/filter4.conf.new /etc/bird/filter4.conf
 ruby utils/bgp-filter.rb --format bird < data/filter6.txt > /etc/bird/filter6.conf.new
 mv /etc/bird/filter6.conf.new /etc/bird/filter6.conf
 
-birdc reload all
-birdc6 reload all
+birdc configure
+birdc6 configure
