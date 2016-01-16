@@ -1,7 +1,9 @@
 protocol bgp eve from dnpeers {
-  neighbor fd42:4992:6a6d:206::1 as OWNAS;
+  neighbor fe80::92 % 'evenet' as OWNAS;
   # 11 ms, 1000 mbit/s, encrypted tunnel (updated: 2015-11-28)
   import where dn42_export_filter(3,25,33);
   export where dn42_export_filter(3,25,33);
   igp table ospf_routes;
+  source address fe80::92;
+  direct;
 };
