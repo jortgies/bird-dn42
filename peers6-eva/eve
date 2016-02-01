@@ -5,5 +5,4 @@ protocol bgp eve from dnpeers {
   export where dn42_export_filter(3,25,33);
   igp table ospf_routes;
   direct;
-  bfd;
 };

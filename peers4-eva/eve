@@ -4,6 +4,4 @@ protocol bgp eve from dnpeers {
   import where dn42_export_filter(3,25,33);
   export where dn42_export_filter(3,25,33);
   igp table ospf_routes;
-  bfd;
-  source address 172.23.75.65;
 };
