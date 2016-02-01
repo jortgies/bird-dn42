@@ -1,9 +1,8 @@
 #protocol bgp florianb from dnpeers {
-#  neighbor  as AS4242423955;
+#  neighbor as 4242423955;
 #  source address fe80::92;
 #  direct;
 #  # 5 ms, 1000 mbit/s, encrypted tunnel (updated: 2015-08-17)
 #  import where dn42_import_filter(2,25,33);
 #  export where dn42_export_filter(2,25,33);
-#
 #};

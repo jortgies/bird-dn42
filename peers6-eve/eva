@@ -4,6 +4,5 @@ protocol bgp eva from dnpeers {
   import where dn42_export_filter(3,25,33);
   export where dn42_export_filter(3,25,33);
   igp table ospf_routes;
-  bfd;
   direct;
 };
