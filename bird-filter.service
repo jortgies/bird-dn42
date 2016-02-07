@@ -1,0 +1,7 @@
+[Unit]
+Description=Bird filter update
+
+[Service]
+Type=oneshot
+ExecStart=/etc/bird/update-filter.sh
+ExecStart=/etc/bird/mkroa

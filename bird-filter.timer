@@ -1,0 +1,10 @@
+[Unit]
+Description=update bird filter
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1d
+Persistent=yes
+
+[Install]
+WantedBy=basic.target
