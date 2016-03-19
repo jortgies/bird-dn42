@@ -1,4 +1,4 @@
-protocol bgp phoenix from dnpeers {
+protocol bgp phoenix from dninternal {
   neighbor fe80::253%'dn42' as 4242420812;
   source address fe80::252;
   import where dn42_import_filter(1,24,33);
