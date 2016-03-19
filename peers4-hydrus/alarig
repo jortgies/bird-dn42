@@ -1,0 +1,6 @@
+protocol bgp alarig from dnpeers {
+  neighbor 172.23.135.134 as 4242423522;
+  source address 172.22.159.239;
+  import where dn42_import_filter(3,24,33);
+  export where dn42_export_filter(3,24,33);
+};
