@@ -1,0 +1,6 @@
+protocol bgp florian from dnpeers {
+  neighbor 10.135.10.118 as 4242423185;
+  source address 10.135.254.198;
+  import where dn42_import_filter(1,24,31);
+  export where dn42_export_filter(1,24,31);
+};
