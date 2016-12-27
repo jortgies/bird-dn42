@@ -1,0 +1,6 @@
+protocol bgp krstn from dnpeers {
+  neighbor 172.20.50.1 as 4242423723;
+  source address 172.22.159.231;
+  import where dn42_import_filter(1,24,33);
+  export where dn42_export_filter(1,24,33);
+};
