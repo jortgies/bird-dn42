@@ -1,6 +1,6 @@
 protocol bgp weiti from dnpeers {
   neighbor 172.20.175.193 as 4242423905;
-  source address 172.22.159.2228;
+  source address 172.22.159.228;
   import where dn42_import_filter(1,24,33);
   export where dn42_export_filter(1,24,33);
 };
