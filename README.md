@@ -30,5 +30,5 @@ $ mtn clone 'mtn://$monotone_server/?net.dn42.*' --branch net.dn42.registry regi
 
 ## Monotone update/filter/roa
 ```
-12 7 * * 2 cd /etc/bird/registry && mtn update && cd .. && ./mkroa && ./update-filter.sh
+12 7 * * 2 cd /etc/bird/registry && mtn pull && cd .. && ./mkroa && ./update-filter.sh
 ```
