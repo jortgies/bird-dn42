@@ -12,7 +12,7 @@ at /etc/bird.conf and /etc/bird6.conf.
 This is NOT the case on debian!
 
 ```
-$ git clone https://github.com/Mic92/ffhl-bird6.git /etc/bird
+$ git clone https://github.com/jortgies/bird-dn42 /etc/bird
 $ ln -s /etc/bird/bird.conf /etc/bird.conf
 $ ln -s /etc/bird/bird6.conf /etc/bird6.conf
 $ export HOST=yourhostname
@@ -23,4 +23,13 @@ $ cp /etc/bird/local4-template.conf /etc/bird/local4-$HOST.conf
 $ cp /etc/bird/local6-template.conf /etc/bird/local6-$HOST.conf
 $ ln -s /etc/bird/local4-$HOST.conf /etc/bird/local4.conf
 $ ln -s /etc/bird/local6-$HOST.conf /etc/bird/local6.conf
+
+$ mtn clone 'mtn://$monotone_server/?net.dn42.*' --branch net.dn42.registry
+$ ln -s /etc/bird/net.dn42.registry /etc/bird/registry
+```
+[monotone servers](https://dn42.net/services/Whois#monotone_monotone-servers)
+
+## Monotone update/filter/roa
+```
+12 7 * * 2 cd /etc/bird/net.dn42.registry && mtn update && cd .. && ./mkroa && ./update-filter.sh
 ```
