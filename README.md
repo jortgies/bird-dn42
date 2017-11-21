@@ -24,12 +24,11 @@ $ cp /etc/bird/local6-template.conf /etc/bird/local6-$HOST.conf
 $ ln -s /etc/bird/local4-$HOST.conf /etc/bird/local4.conf
 $ ln -s /etc/bird/local6-$HOST.conf /etc/bird/local6.conf
 
-$ mtn clone 'mtn://$monotone_server/?net.dn42.*' --branch net.dn42.registry
-$ ln -s /etc/bird/net.dn42.registry /etc/bird/registry
+$ mtn clone 'mtn://$monotone_server/?net.dn42.*' --branch net.dn42.registry registry
 ```
 [monotone servers](https://dn42.net/services/Whois#monotone_monotone-servers)
 
 ## Monotone update/filter/roa
 ```
-12 7 * * 2 cd /etc/bird/net.dn42.registry && mtn update && cd .. && ./mkroa && ./update-filter.sh
+12 7 * * 2 cd /etc/bird/registry && mtn update && cd .. && ./mkroa && ./update-filter.sh
 ```
