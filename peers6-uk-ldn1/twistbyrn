@@ -1,0 +1,5 @@
+protocol bgp twistbyrn from dnpeers {
+  neighbor 2a03:b0c0:3:d0::82:1001 as 4242423957;
+  import where dn42_import_filter(1,24,33);
+  export where dn42_export_filter(1,24,33);
+};

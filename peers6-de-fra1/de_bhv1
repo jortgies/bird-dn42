@@ -1,4 +1,4 @@
-protocol bgp pyxis from dninternal {
+protocol bgp de_bhv1 from dninternal {
   neighbor fe80::250%'dn42' as 4242420812;
   source address fe80::252;
   import where dn42_import_filter(3,24,34);

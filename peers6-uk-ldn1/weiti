@@ -1,0 +1,5 @@
+protocol bgp weiti from dnpeers {
+  neighbor fe80::42%'weiti.dn42' as 4242423905;
+  import where dn42_import_filter(1,24,33);
+  export where dn42_export_filter(1,24,33);
+};

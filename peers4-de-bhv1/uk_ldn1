@@ -1,5 +1,5 @@
-protocol bgp pyxis from dninternal {
-  neighbor 172.22.159.250 as 4242420812;
+protocol bgp uk_ldn1 from dninternal {
+  neighbor 172.22.159.251 as 4242420812;
   import where dn42_import_filter(3,24,34);
   export where dn42_export_filter(3,24,34);
 };

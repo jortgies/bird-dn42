@@ -1,0 +1,5 @@
+protocol bgp krstn from dnpeers {
+  neighbor fe80::1%'krstn.dn42' as 4242423723;
+  import where dn42_import_filter(1,24,33);
+  export where dn42_export_filter(1,24,33);
+};
