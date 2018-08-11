@@ -1,4 +1,4 @@
-protocol bgp phoenix from dninternal {
+protocol bgp nl_mep1 from dninternal {
   neighbor fe80::253%'dn42' as 4242420812;
   source address fe80::250;
   import where dn42_import_filter(3,24,34);
