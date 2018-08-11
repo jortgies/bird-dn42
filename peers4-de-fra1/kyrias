@@ -1,6 +1,0 @@
-protocol bgp kyrias from dnpeers {
-  neighbor 172.20.154.192 as 4242422017;
-  source address 172.22.159.230;
-  import where dn42_import_filter(3,24,33);
-  export where dn42_export_filter(3,24,33);
-};

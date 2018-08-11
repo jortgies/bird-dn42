@@ -1,6 +1,0 @@
-protocol bgp neo2shyalien from dnpeers {
-  neighbor 172.22.134.193 as 4242421110;
-  source address 172.22.159.237;
-  import where dn42_import_filter(4,24,33);
-  export where dn42_export_filter(4,24,33);
-};

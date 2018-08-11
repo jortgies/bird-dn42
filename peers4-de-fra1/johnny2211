@@ -1,6 +1,0 @@
-protocol bgp johnny2211 from dnpeers {
-  neighbor 172.23.119.113 as 4242422110;
-  source address 172.22.159.227;
-  import where dn42_import_filter(4,24,33);
-  export where dn42_export_filter(4,24,33);
-};

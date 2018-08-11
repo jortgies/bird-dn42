@@ -1,6 +1,0 @@
-protocol bgp dn42ix from dnpeers {
-  neighbor 172.23.183.1 as 4242423965;
-  source address 172.23.183.58;
-  import where dn42_import_filter(1,24,33);
-  export where dn42_export_filter(1,24,33);
-};
