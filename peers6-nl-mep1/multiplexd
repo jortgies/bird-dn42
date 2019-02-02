@@ -1,0 +1,6 @@
+protocol bgp multiplexd from dnpeers {
+  neighbor fe80::4321:11%'wg-multiplexd' as 4242422499;
+  #source address fe80::253;
+  import where dn42_import_filter(2,24,33);
+  export where dn42_export_filter(2,24,33);
+};

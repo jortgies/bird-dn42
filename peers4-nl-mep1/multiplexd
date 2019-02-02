@@ -1,0 +1,6 @@
+protocol bgp multiplexd from dnpeers {
+  neighbor 172.20.163.115 as 4242422499;
+  source address 172.20.53.1;
+  import where dn42_import_filter(2,24,33);
+  export where dn42_export_filter(2,24,33);
+};

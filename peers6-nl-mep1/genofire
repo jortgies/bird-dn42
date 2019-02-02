@@ -1,0 +1,7 @@
+protocol bgp genofire from dnpeers {
+  #neighbor fe80::254%'wg-genofire' as 4242420146;
+  neighbor fd42:ffc:ab1e:1::fd42:0 as 4242420146;
+  #source address fe80::253;
+  import where dn42_import_filter(2,24,33);
+  export where dn42_export_filter(2,24,33);
+};

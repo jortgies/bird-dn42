@@ -1,0 +1,6 @@
+protocol bgp adnidor from dnpeers {
+  neighbor fe80::3677%'adnidor-dn42' as 4242423677;
+  #source address fe80::253;
+  import where dn42_import_filter(2,24,33);
+  export where dn42_export_filter(2,24,33);
+};

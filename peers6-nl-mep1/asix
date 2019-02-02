@@ -1,0 +1,6 @@
+protocol bgp asix from dnpeers {
+  neighbor fdfd:dead:c0de:1::1 as 4242421230;
+  #source address fe80::253;
+  import where dn42_import_filter(2,24,33);
+  export where dn42_export_filter(2,24,33);
+};
