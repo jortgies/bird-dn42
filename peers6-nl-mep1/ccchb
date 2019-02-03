@@ -1,0 +1,6 @@
+protocol bgp ccchb from dnpeers {
+  neighbor fdd6:aff6:5f6f:1::8 as 76198;
+  #source address fe80::253;
+  import where dn42_import_filter(2,24,33);
+  export where dn42_export_filter(2,24,33);
+};
