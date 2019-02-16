@@ -1,6 +1,6 @@
 protocol bgp adnidor from dnpeers {
   neighbor 172.20.4.37 as 4242423677;
-  #source address 172.22.159.231;
   import where dn42_import_filter(2,24,33);
   export where dn42_export_filter(2,24,33);
+  default bgp_local_pref 90;
 };

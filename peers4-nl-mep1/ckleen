@@ -1,0 +1,5 @@
+protocol bgp ckleen from dnpeers {
+  neighbor 172.23.100.193 as 4242422042;
+  import where dn42_import_filter(1,24,33);
+  export where dn42_export_filter(1,24,33);
+};
