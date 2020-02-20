@@ -1,0 +1,6 @@
+protocol bgp bhv1 from dninternal {
+  neighbor fda1:d21:d67f:1::3 as 4242420812;
+  source address fda1:d21:d67f:1::2;
+  import where dn42_import_filter(2,24,34);
+  export where dn42_export_filter(2,24,34);
+};

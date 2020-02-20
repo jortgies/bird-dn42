@@ -1,0 +1,5 @@
+protocol bgp bhv1 from dninternal {
+  neighbor 172.20.53.3 as 4242420812;
+  import where dn42_import_filter(2,24,34);
+  export where dn42_export_filter(2,24,34);
+};
